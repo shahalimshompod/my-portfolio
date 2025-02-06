@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+*{
+    cursor: none;
+}
+
+/* fonts here */
+
+/* grand slang font */
+
+@font-face {
+    font-family: 'Grand-Slang';
+    src: url('./assets/fonts/grandslang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slang {
+    font-family: 'Grand-Slang', sans-serif;
+}
+
+
+/* montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
