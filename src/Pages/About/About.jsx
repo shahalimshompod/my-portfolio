@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Projects from "../../Components/Projects/Projects";
 import AboutBanner from "../../Components/AboutBanner/AboutBanner";
 import AboutMeSec from "../../Components/AboutMeSec/AboutMeSec";
+import SkillSection from "../../Components/Skills/SkillSection";
 
 
 const About = () => {
@@ -16,6 +17,7 @@ const About = () => {
 
             <AboutBanner />
             <AboutMeSec />
+            <SkillSection />
 
         </motion.div>
     );
