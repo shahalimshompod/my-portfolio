@@ -1,15 +1,21 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = () => {
+const ProjectCard = ({ data, idx }) => {
+    const { name, description, technologies, githubRepo, liveDemo, cardImage } = data;
+
+    // Determine flex direction based on index (only for large devices)
+    const flexDirection = idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse";
+
     return (
-        <div className='my-32 flex items-end gap-5'>
+        <div className={`my-28 flex flex-col items-center lg:items-end gap-5 ${flexDirection}`}>
             {/* Image container with reveal animation */}
             <motion.div
+                className="w-full"
                 style={{
                     position: 'relative',
-                    width: '100%', // Ensure the container takes full width
                     height: 'auto', // Maintain aspect ratio
                     overflow: 'hidden', // Hide the overflowing part
                 }}
@@ -19,29 +25,29 @@ const ProjectCard = () => {
                 viewport={{ once: true }} // Animation happens only once
             >
                 <img
-                    src="https://i.ibb.co.com/PvBF7kdg/image.png"
+                    src={cardImage}
                     alt="Project image"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    className="w-full h-auto block"
                 />
             </motion.div>
 
             {/* Project details */}
-            <div className='w-7/12'>
+            <div className='w-full lg:w-1/2 px-4 lg:px-0'>
                 {/* Project Title and Live Button */}
                 <motion.div
-                    className='flex items-center gap-4'
+                    className='flex flex-col lg:flex-row items-start lg:items-center gap-4'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     viewport={{ once: true }}
                 >
-                    <h1 className='montserrat font-bold uppercase text-5xl text-[#424874]'>Pet Promise</h1>
+                    <h1 className='montserrat font-bold uppercase text-3xl lg:text-5xl text-[#424874]'>{name}</h1>
                     <motion.a
-                        href="#"
+                        href={liveDemo}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <button className='flex items-center gap-1 bg-[#A6B1E1] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'>
+                        <button className='flex items-center gap-1 bg-[#424874] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'>
                             <span>View Live</span>
                             <MdOutlineArrowOutward />
                         </button>
@@ -50,18 +56,16 @@ const ProjectCard = () => {
 
                 {/* Project Description */}
                 <motion.h3
-                    className='montserrat my-4 text-[#A6B1E1] font-black text-xl'
+                    className='montserrat my-4 text-[#A6B1E1] font-black text-lg lg:text-xl'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
                     viewport={{ once: true }}
-                >
-                    Pet Promise is a platform simplifying pet care, adoption, and donation campaigns, making it easy to adopt, donate, or support pet welfare.
-                </motion.h3>
+                >{description}</motion.h3>
 
                 {/* Technologies and GitHub Button */}
                 <motion.div
-                    className='flex items-center gap-6 mb-4'
+                    className='flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 mb-4'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.4 }}
@@ -69,16 +73,14 @@ const ProjectCard = () => {
                 >
                     <div>
                         <h3 className='montserrat font-semibold'>Technologies used:</h3>
-                        <h4 className='montserrat font-semibold'>
-                            <span>Reactjs</span> | <span>Nodejs</span> | <span>Expressjs</span> | <span>MongoDB</span>
-                        </h4>
+                        <h4 className='montserrat font-semibold'>{technologies}</h4>
                     </div>
                     <motion.a
-                        href="#"
+                        href={githubRepo}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <button className='flex items-center gap-1 bg-[#A6B1E1] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'>
+                        <button className='flex items-center gap-1 bg-[#424874] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'>
                             <span>View GitHub Repo</span>
                             <MdOutlineArrowOutward />
                         </button>
@@ -86,15 +88,17 @@ const ProjectCard = () => {
                 </motion.div>
 
                 {/* Project Details Button */}
-                <motion.button
-                    className='flex items-center gap-1 bg-[#A6B1E1] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.6 }}
-                    viewport={{ once: true }}
-                >
-                    Project Details
-                </motion.button>
+                <Link to={''}>
+                    <motion.button
+                        className='flex items-center gap-1 bg-[#424874] py-2 px-3 montserrat text-sm font-bold text-[#F4EEFF]'
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        Project Details
+                    </motion.button>
+                </Link>
             </div>
         </div>
     );

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Pet Promise",
+        "description": "Pet Promise is a platform simplifying pet care, adoption, and donation campaigns, making it easy to adopt, donate, or support pet welfare.",
+        "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
+        "githubRepo": "https://github.com/shahalimshompod/pet-promise-client",
+        "liveDemo": "https://pet-promise.web.app/",
+        "cardImage": "https://i.ibb.co.com/PvBF7kdg/image.png"
+    },
+    {
+        "id": 2,
+        "name": "Meal Mates",
+        "description": "MealMates is a web app that connects food donors with those in need, reducing food waste by donating surplus food before it expires.",
+        "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
+        "githubRepo": "https://github.com/shahalimshompod/meal-mates-client",
+        "liveDemo": "https://mealmates-293e5.web.app/",
+        "cardImage": "https://i.ibb.co.com/gZ0hk5K8/image.png"
+    },
+    {
+        "id": 3,
+        "name": "Movie Sphere",
+        "description": "MovieSphere - A platform to explore, manage, and enjoy movie gossips with an intuitive interface and powerful features.",
+        "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
+        "githubRepo": "https://github.com/shahalimshompod/movie-sphere-client",
+        "liveDemo": "https://moviesphere.surge.sh/",
+        "cardImage": "https://i.ibb.co.com/ym073XCm/image.png"
+    },
+    {
+        "id": 4,
+        "name": "InstantR",
+        "description": "InstantR - A platform to explore, manage, and gain knowledge by the information and news which is happening world-wide with an intuitive interface and powerful features.",
+        "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
+        "githubRepo": "#",
+        "liveDemo": "https://instant-r.web.app/",
+        "cardImage": "https://i.ibb.co.com/60HMLPVg/image.png"
+    }
+]

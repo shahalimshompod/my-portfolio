@@ -17,11 +17,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <LandingPage />
-      },
-      {
-        path: '/about',
         element: <About />
+      },
+      // projects page
+      {
+        path: '/projects',
+        element: <LandingPage />,
+        loader: () => fetch("/projects.json")
       },
       {
         path: '/resume',

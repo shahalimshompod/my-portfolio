@@ -1,44 +1,23 @@
+import { useLoaderData } from "react-router-dom";
 import ProjectBanner from "../../Components/ProjectBanner/ProjectBanner";
-import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import { motion } from "framer-motion";
+import Projects from "../../Components/Projects/Projects";
 
 const LandingPage = () => {
+    // get projects data
+    const projectData = useLoaderData();
+
     return (
         <motion.div
 
-            initial={{ opacity: 0, y: 500 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            exit={{ opacity: 0, y: 800 }}
-            className="mx-28">
+            exit={{ opacity: 0 }}
+            className="mx-3 lg:mx-24 2xl:mx-36">
             <ProjectBanner />
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
-            <div className="mx-20">
-                <ProjectCard />
-            </div>
+            <Projects data={projectData} />
+
         </motion.div>
     );
 };

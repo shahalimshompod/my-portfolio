@@ -47,9 +47,9 @@ const Navbar = () => {
             </a>
             <div>
                 <ul className="list-none flex flex-col items-center gap-2">
-                    <NavLink className="montserrat font-semibold text-[#424874]">Projects</NavLink>
-                    <NavLink className="montserrat font-semibold text-[#424874]">About me</NavLink>
-                    <NavLink className="montserrat font-semibold text-[#424874]">Resume</NavLink>
+                    <NavLink to='/' className="montserrat font-semibold text-[#424874]">About me</NavLink>
+                    <NavLink to='/projects' className="montserrat font-semibold text-[#424874]">Projects</NavLink>
+                    <NavLink to='/' className="montserrat font-semibold text-[#424874]">Resume</NavLink>
                 </ul>
             </div>
         </motion.div>
