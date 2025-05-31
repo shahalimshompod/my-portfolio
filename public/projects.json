@@ -6,7 +6,10 @@
         "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
         "githubRepo": "https://github.com/shahalimshompod/pet-promise-client",
         "liveDemo": "https://pet-promise.web.app/",
-        "cardImage": "https://i.ibb.co.com/PvBF7kdg/image.png"
+        "cardImage": "https://i.ibb.co.com/PvBF7kdg/image.png",
+        "challenges": "Integrating real-time updates for adoption requests, ensuring secure payment transactions for donations, and optimizing database queries for faster response times were some of the key challenges faced during development.",
+        "futurePlans": "Adding AI-based pet matching suggestions, enhancing the UI/UX for a more intuitive experience, and integrating blockchain for secure pet adoption records.",
+        "detailedDescription": "Pet Promise is a comprehensive platform dedicated to simplifying pet care, adoption, and donation campaigns, making it easier for individuals and organizations to support animal welfare. Whether you're looking to adopt a loving companion, start a fundraising campaign for a pet in need, or contribute to shelters and rescue groups, Pet Promise provides the tools and resources to make the process seamless. With an intuitive interface and a strong community-driven approach, Pet Promise connects potential pet owners with adoptable pets, enables hassle-free donation drives, and raises awareness about responsible pet care. By bridging the gap between pet lovers and animals in need, our platform empowers users to make a meaningful impact in the lives of countless pets."
     },
     {
         "id": 2,
@@ -15,7 +18,10 @@
         "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
         "githubRepo": "https://github.com/shahalimshompod/meal-mates-client",
         "liveDemo": "https://mealmates-293e5.web.app/",
-        "cardImage": "https://i.ibb.co.com/gZ0hk5K8/image.png"
+        "cardImage": "https://i.ibb.co.com/gZ0hk5K8/image.png",
+        "challenges": "Ensuring real-time updates for food availability, managing logistics for food distribution, and implementing a fair donor-recipient matching system were some of the major challenges faced during development.",
+        "futurePlans": "Implementing AI-driven food demand prediction, integrating a reward system for donors, and expanding the platform to support multi-city operations.",
+        "detailedDescription": "MealMates is a web application designed to bridge the gap between food donors and those in need, promoting a sustainable and efficient way to reduce food waste. By ensuring surplus food is donated and distributed before it expires, MealMates helps individuals, businesses, and organizations contribute to a meaningful cause while supporting communities facing food insecurity. With an intuitive and user-friendly interface, users can easily browse, search, and sort available food items based on expiry dates, locations, and categories. The platform streamlines the donation process, making it effortless for donors to list surplus food and for recipients to find what they need. MealMates not only fosters a culture of giving but also contributes to environmental sustainability by minimizing food wastage."
     },
     {
         "id": 3,
@@ -24,7 +30,10 @@
         "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
         "githubRepo": "https://github.com/shahalimshompod/movie-sphere-client",
         "liveDemo": "https://moviesphere.surge.sh/",
-        "cardImage": "https://i.ibb.co.com/ym073XCm/image.png"
+        "cardImage": "https://i.ibb.co.com/ym073XCm/image.png",
+        "challenges": "Fetching and optimizing large amounts of movie data in real-time, ensuring smooth UI performance, and implementing a recommendation system were key challenges.",
+        "futurePlans": "Adding AI-powered movie recommendations, integrating user reviews & ratings, and developing a mobile app version.",
+        "detailedDescription": "Welcome to MovieSphere, your ultimate destination for exploring, managing, and staying updated with the latest movie buzz. Whether you're a casual moviegoer or a dedicated cinephile, MovieSphere provides a seamless experience to discover trending films, engage in movie discussions, and stay informed about the latest industry news and gossip. With its intuitive user interface and powerful features, MovieSphere makes it easier than ever to browse movies, track your favorites, and dive into the world of cinema. From blockbuster hits to hidden gems, our platform ensures you never miss an update about the films and stars you love."
     },
     {
         "id": 4,
@@ -33,6 +42,9 @@
         "technologies": "ReactJs | NodeJs | ExpressJs | MongoDB",
         "githubRepo": "#",
         "liveDemo": "https://instant-r.web.app/",
-        "cardImage": "https://i.ibb.co.com/60HMLPVg/image.png"
+        "cardImage": "https://i.ibb.co.com/60HMLPVg/image.png",
+        "challenges": "Ensuring real-time news updates, managing API rate limits, and providing accurate & unbiased news filtering were some challenges faced during development.",
+        "futurePlans": "Implementing personalized news feeds, integrating AI-powered news summarization, and adding support for multi-language news sources.",
+        "detailedDescription": "InstantR is a dynamic platform designed to keep you informed and engaged with real-time news and global events. Whether you’re looking to explore breaking news, track trending topics, or deepen your understanding of world affairs, InstantR provides a seamless and intuitive experience. With a powerful and user-friendly interface, the platform allows users to browse, filter, and stay updated on the latest happenings across various domains, including politics, technology, entertainment, and more. InstantR ensures that you always have access to accurate and up-to-date information, empowering you to stay ahead in an ever-evolving world."
     }
 ]

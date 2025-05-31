@@ -8,18 +8,20 @@ const Preloader = ({ onComplete }) => {
 
     useEffect(() => {
         if (index < words.length) {
-            setTimeout(() => setIndex(index + 1), 1000); // Show next word after 3s
+            const timeout = setTimeout(() => setIndex(index + 1), 2000); // Show next word after 2s
+            return () => clearTimeout(timeout); // Cleanup timeout
         } else {
-            setTimeout(() => onComplete && onComplete(), 800); // Hide preloader after last word
+            const timeout = setTimeout(() => onComplete && onComplete(), 1000); // Hide preloader after last word
+            return () => clearTimeout(timeout); // Cleanup timeout
         }
-    }, [index]);
+    }, [index, onComplete]);
 
     return (
         <motion.div
             className="preloader"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
-            transition={{ duration: 1, delay: 3 }} // Fade out after all words
+            transition={{ duration: 1, delay: words.length * 2 }} // Fade out after all words
             style={{
                 position: "fixed",
                 top: 0,
@@ -38,13 +40,13 @@ const Preloader = ({ onComplete }) => {
                 <motion.div
                     className="w-10 h-10 bg-[#A6B1E1] rounded-full relative"
                     initial={{ x: -100, scale: 0.8 }}
-                    animate={{scale: [1, 1.2, 1] }}
+                    animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
                 />
                 {/* Animated Text */}
                 <AnimatePresence mode="wait">
                     <motion.h1
-                        className="montserrat font-light uppercase text-[#A6B1E1] text-xl absolute left-14"
+                        className="montserrat font-light uppercase text-[#A6B1E1] text-xl absolute -left-10"
                         key={words[index]}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 10 }}

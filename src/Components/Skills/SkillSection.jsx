@@ -22,41 +22,38 @@ const skills = [
 
 const SkillSection = () => {
     return (
-        <div className="flex flex-col items-center py-16">
+        <div id="skills" className="flex flex-col items-center">
             {/* Section Title */}
             <motion.h1
                 initial={{ x: -20 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="uppercase montserrat font-bold text-4xl text-[#424874] text-center mb-12">
-                Skills & Technologies
+                className="uppercase montserrat font-bold text-4xl text-[#424874] text-center mb-10 md:mb-16 lg:mb-24"
+            >
+                My Skills
             </motion.h1>
 
             {/* Skills Grid with Scroll Animation */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-16 px-6">
-                {skills.map((skill, index) => {
-
-                    return (
-                        <motion.div
-                            key={index}
-                            className="w-28 sm:w-32 md:w-36 flex flex-col items-center"
-                            initial={{ opacity: 0, y: 20 }} // Initial hidden state
-                            whileInView={{ opacity: 1, y: 0 }} // Animate when in view
-                            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }} // Delay for sequential fade-in
-                            viewport={{ once: true }}
-                        >
-                            <motion.img
-                                className="w-full drop-shadow-lg"
-                                src={skill.img}
-                                alt={skill.name}
-                                animate={{ y: index % 2 === 0 ? [-10, 10, -10] : [10, -10, 10] }}
-                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            />
-
-                        </motion.div>
-                    );
-                })}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 sm:gap-12 md:gap-16 px-6">
+                {skills.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        className="w-20 sm:w-28 md:w-32 lg:w-36 flex flex-col items-center"
+                        initial={{ opacity: 0, y: 20 }} // Initial hidden state
+                        whileInView={{ opacity: 1, y: 0 }} // Animate when in view
+                        transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }} // Delay for sequential fade-in
+                        viewport={{ once: true }}
+                    >
+                        <motion.img
+                            className="w-full drop-shadow-lg"
+                            src={skill.img}
+                            alt={skill.name}
+                            animate={{ y: index % 2 === 0 ? [-10, 10, -10] : [10, -10, 10] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </motion.div>
+                ))}
             </div>
         </div>
     );
