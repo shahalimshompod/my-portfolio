@@ -6,28 +6,28 @@ import Preloader from "../Preloader/Preloader";
 import SmoothScroll from "../../Components/SmoothScroll/SmoothScroll";
 
 const Root = () => {
-    const [showPreloader, setShowPreloader] = useState(true);
-    const location = useLocation(); // Get current route location
+  const [showPreloader, setShowPreloader] = useState(true);
+  const location = useLocation(); // Get current route location
 
-    // Scroll to top on route change
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
-    return (
-        <>
-            {showPreloader ? (
-                <Preloader onComplete={() => setShowPreloader(false)} />
-            ) : (
-                <div>
-                    <SmoothScroll />
-                    <Navbar />
-                    <Outlet />
-                    <Footer />
-                </div>
-            )}
-        </>
-    );
+  return (
+    <>
+      {showPreloader ? (
+        <Preloader onComplete={() => setShowPreloader(false)} />
+      ) : (
+        <div>
+          <SmoothScroll />
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Root;

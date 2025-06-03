@@ -17,8 +17,6 @@ const ProjectDetails = () => {
         setDetailsData(detailData)
     }, [data, id])
 
-    console.log(detailsData);
-
     return (
         <div className='mx-3 lg:mx-24 2xl:mx-36'>
             <DetailsData data={detailsData} />
