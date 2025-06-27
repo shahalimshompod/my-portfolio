@@ -39,23 +39,11 @@ const Preloader = ({ onComplete }) => {
                 {/* Animated Circle */}
                 <motion.div
                     className="w-10 h-10 bg-[#A6B1E1] rounded-full relative"
-                    initial={{ x: -100, scale: 0.8 }}
+                    initial={{ x: 0, scale: 0.8 }}
                     animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+                    transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
                 />
-                {/* Animated Text */}
-                <AnimatePresence mode="wait">
-                    <motion.h1
-                        className="montserrat font-light uppercase text-[#A6B1E1] text-xl absolute -left-10"
-                        key={words[index]}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 10 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        {words[index]}
-                    </motion.h1>
-                </AnimatePresence>
+                
             </motion.div>
         </motion.div>
     );

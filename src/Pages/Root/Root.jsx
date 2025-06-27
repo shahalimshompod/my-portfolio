@@ -6,18 +6,36 @@ import Preloader from "../Preloader/Preloader";
 import SmoothScroll from "../../Components/SmoothScroll/SmoothScroll";
 
 const Root = () => {
-  const [showPreloader, setShowPreloader] = useState(true);
-  const location = useLocation(); // Get current route location
+  const [showPreloader, setShowPreloader] = useState(false);
+  const [isChecking, setIsChecking] = useState(true); // Add this line
+  const location = useLocation();
 
-  // Scroll to top on route change
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      setShowPreloader(true);
+    }
+
+    setIsChecking(false); // We are done checking
+  }, []);
+
+  const handlePreloaderComplete = () => {
+    sessionStorage.setItem("hasVisited", "true");
+    setShowPreloader(false);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  // 🛑 Don't render anything until checking is done
+  if (isChecking) return null;
+
   return (
     <>
       {showPreloader ? (
-        <Preloader onComplete={() => setShowPreloader(false)} />
+        <Preloader onComplete={handlePreloaderComplete} />
       ) : (
         <div>
           <SmoothScroll />
