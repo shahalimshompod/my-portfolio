@@ -10,6 +10,8 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0); // Track previous scroll position
   const [isDrawerOpen, setIsDrawerOpen] = useState(false); // State to control drawer visibility
 
+  console.log(isVisible)
+
   // Handle scroll to hide/show navbar
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +19,7 @@ const Navbar = () => {
 
       // If scrolling down, hide the navbar
       if (currentScrollPos > prevScrollPos) {
+        console.log(`current - ${currentScrollPos} prev- ${prevScrollPos}`)
         setIsVisible(false);
       }
       // If scrolling up, show the navbar
@@ -27,6 +30,10 @@ const Navbar = () => {
       // Update previous scroll position
       setPrevScrollPos(currentScrollPos);
     };
+
+    if(isDrawerOpen){
+    setIsVisible(true)
+  }
 
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
@@ -41,6 +48,7 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+  
 
   return (
     <motion.div
@@ -126,11 +134,11 @@ const Navbar = () => {
       {/* Side Drawer (Visible on small devices) */}
       {isDrawerOpen && (
         <motion.div
-          className="fixed inset-0  bg-opacity-50 z-50 lg:hidden"
+          className="fixed inset-0  bg-opacity-50 z-[1200] lg:hidden"
           onClick={toggleDrawer} // Close drawer when clicking outside
         >
           <motion.div
-            className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg"
+            className="fixed top-0 right-0 h-full w-full bg-white shadow-lg"
             initial={{ x: "100%" }} // Start off-screen
             animate={{ x: 0 }} // Slide in
             exit={{ x: "100%" }} // Slide out
