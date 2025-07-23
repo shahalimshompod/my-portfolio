@@ -30,7 +30,7 @@ const AboutMeSec = () => {
               stack technologies based in Pabna, Bangladesh. My journey into
               programming began in June 2024, driven by a deep curiosity about
               how websites and applications work. At first, everything felt
-              overwhelming—variables, loops, and functions seemed like a foreign
+              overwhelming variables, loops, and functions seemed like a foreign
               language. But with dedication and countless hours of practice, I
               gradually unlocked the logic behind coding.
             </motion.p>

@@ -121,7 +121,7 @@ const Navbar = () => {
           </NavLink>
 
           <a
-            href="https://drive.google.com/file/d/1uNCUeFhI2nl-GNwaV-WO11zGCM6X5Uyz/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1H3cSTCELg38AUfRfzK90De3vJxl2KAUz"
             target="_blank"
             rel="noopener noreferrer"
             className="montserrat font-semibold text-[#424874] hover:text-[#A6B1E1] transition-colors"

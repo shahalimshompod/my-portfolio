@@ -177,7 +177,7 @@ const AboutBanner = () => {
             </div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="https://drive.google.com/uc?export=download&id=18MmPqA8SelC3aoW1rtHKt2buUWlAkjSQ"
+                href="https://drive.google.com/uc?export=download&id=1H3cSTCELg38AUfRfzK90De3vJxl2KAUz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#A6B1E1] py-2 px-4 rounded text-[#F4EEFF] montserrat font-semibold text-sm sm:text-base"
